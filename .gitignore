@@ -1,0 +1,27 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vite
+*.log
+*.tsbuildinfo
+
+# Local IDE / agent
+.claude/
+.vscode/
+.idea/
+
+# Screenshots generados durante desarrollo (en root)
+/shot-*.png
+/hero-checkpoint.png
+/hero-mobile.png
+/hero-full.png
+
+# Originales sueltos del cliente en root (la copia oficial vive en public/images/)
+/info.png
+/logo.png
+/menu.png
+/menu1.png
+/foto del local.png
+/foto principal del negocio.png

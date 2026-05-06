@@ -1,0 +1,165 @@
+:root {
+  /* —— Base crema (fondos) —— */
+  --cream-base: #FBF7F0;
+  --cream-warm: #F5E6D3;
+  --cream-soft: #F0E5D0;
+
+  /* —— Acentos cálidos —— */
+  --tomato-red: #C8242A;
+  --tomato-deep: #A11D22;
+  --mango-orange: #E89B3D;
+  --mango-soft: #F4B96A;
+
+  /* —— Naturales (frescura) —— */
+  --palm-green: #5C7A4D;
+  --palm-light: #8AA877;
+
+  /* —— Texto y profundidad —— */
+  --chocolate: #3D2817;
+  --chocolate-soft: #5C4231;
+  --gold-toast: #B8923A;
+
+  /* —— Funcionales —— */
+  --white-pure: #FFFFFF;
+  --shadow-warm: rgba(61, 40, 23, 0.08);
+  --shadow-strong: rgba(61, 40, 23, 0.15);
+  --whatsapp-green: #25D366;
+
+  /* —— Tipografía —— */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  /* —— Espaciado —— */
+  --section-padding: 120px 0;
+  --container-max: 1320px;
+  --container-padding: 0 64px;
+
+  /* —— Transiciones —— */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-sans);
+  color: var(--chocolate);
+  background: var(--cream-base);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: none;
+}
+
+/* Hide native cursor on interactive elements */
+a, button, [role="button"], input, textarea, select {
+  cursor: none;
+}
+
+/* Tipografía utilitaria */
+.h-display {
+  font-family: var(--font-serif);
+  font-size: clamp(64px, 9vw, 144px);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+.h-1 {
+  font-family: var(--font-serif);
+  font-size: clamp(48px, 6vw, 88px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+.h-2 {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+.h-3 {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 2.8vw, 36px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.italic-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: 19px;
+  line-height: 1.65;
+}
+.body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.65;
+}
+.caption {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Selection */
+::selection {
+  background: var(--tomato-red);
+  color: var(--cream-base);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--mango-orange);
+  border-radius: 10px;
+  border: 2px solid var(--cream-base);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tomato-red);
+}
+
+/* Cursor visible only on coarse pointer devices (touch) */
+@media (pointer: coarse) {
+  body, a, button, [role="button"], input, textarea, select {
+    cursor: auto;
+  }
+}
