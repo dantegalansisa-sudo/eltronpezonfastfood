@@ -2,13 +2,12 @@ import { motion } from 'framer-motion';
 import RevealText from './shared/RevealText';
 import MagneticButton from './shared/MagneticButton';
 import AnimatedCounter from './shared/AnimatedCounter';
+import { wa } from './shared/whatsapp';
 import './Sobre.css';
 
 const SOBRE_IMG = '/images/local-principal.png';
 
-const WA_HREF = `https://wa.me/18299678181?text=${encodeURIComponent(
-  'Hola, quiero saber más sobre El Tropezón Fast Food',
-)}`;
+const WA_HREF = wa('quiero reservar una mesa');
 
 const Sobre = () => {
   return (

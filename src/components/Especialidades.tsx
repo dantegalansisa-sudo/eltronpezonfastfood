@@ -1,11 +1,8 @@
 import { motion } from 'framer-motion';
 import RevealText from './shared/RevealText';
 import MagneticButton from './shared/MagneticButton';
+import { wa } from './shared/whatsapp';
 import './Especialidades.css';
-
-const PHONE = '18299678181';
-const wa = (msg: string) =>
-  `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
 
 const especialidades = [
   {
@@ -14,7 +11,7 @@ const especialidades = [
     precio: 'RD$ 800',
     badge: 'Plato Estrella',
     img: 'https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=900&q=85&auto=format&fit=crop',
-    waMsg: 'Hola, quiero ordenar el Mofongo Tropezón Especial',
+    action: 'quiero ordenar el Mofongo Tropezón Especial',
   },
   {
     nombre: 'Pizza Tropezón Especial',
@@ -22,7 +19,7 @@ const especialidades = [
     precio: 'Desde RD$ 600',
     badge: 'Best-Seller',
     img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=900&q=85&auto=format&fit=crop',
-    waMsg: 'Hola, quiero ordenar la Pizza Tropezón Especial',
+    action: 'quiero ordenar la Pizza Tropezón Especial',
   },
   {
     nombre: 'Parrilla Mar y Tierra',
@@ -30,7 +27,7 @@ const especialidades = [
     precio: 'Desde RD$ 1,800',
     badge: 'Para Compartir',
     img: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=900&q=85&auto=format&fit=crop',
-    waMsg: 'Hola, quiero ordenar la Parrilla Mar y Tierra',
+    action: 'quiero ordenar la Parrilla Mar y Tierra',
   },
   {
     nombre: 'Hamburger Doble Angus',
@@ -38,7 +35,7 @@ const especialidades = [
     precio: 'RD$ 850',
     badge: 'Premium',
     img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&q=85&auto=format&fit=crop',
-    waMsg: 'Hola, quiero ordenar la Hamburger Doble Angus',
+    action: 'quiero ordenar la Hamburger Doble Angus',
   },
 ];
 
@@ -94,7 +91,7 @@ const Especialidades = () => {
                   <span className="esp-card__price">{e.precio}</span>
                   <MagneticButton strength={0.25}>
                     <a
-                      href={wa(e.waMsg)}
+                      href={wa(e.action)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="esp-card__cta"

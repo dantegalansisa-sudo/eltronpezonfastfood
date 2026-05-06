@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion';
-
-const PHONE = '18299678181';
-const DEFAULT_MSG = 'Hola, quiero hacer un pedido en El Tropezón Fast Food';
+import { wa } from './whatsapp';
 
 const WhatsAppButton = () => {
-  const href = `https://wa.me/${PHONE}?text=${encodeURIComponent(DEFAULT_MSG)}`;
+  const href = wa('quiero hacer un pedido');
 
   return (
     <motion.a

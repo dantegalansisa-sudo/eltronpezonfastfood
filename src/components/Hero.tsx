@@ -8,14 +8,13 @@ import {
   LimonDeco,
   PlatanoDeco,
 } from './shared/Decoratives';
+import { wa } from './shared/whatsapp';
 import './Hero.css';
 
 const HERO_IMAGE =
   'https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=1400&q=85&auto=format&fit=crop';
 
-const WA_HREF = `https://wa.me/18299678181?text=${encodeURIComponent(
-  'Hola, quiero ordenar el Mofongo Tropezón Especial',
-)}`;
+const WA_HREF = wa('quiero ordenar el Mofongo Tropezón Especial');
 
 const Hero = () => {
   return (

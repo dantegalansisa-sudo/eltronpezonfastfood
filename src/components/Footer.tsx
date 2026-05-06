@@ -1,7 +1,5 @@
+import { wa, WA_PHONE, WA_PHONE_DISPLAY } from './shared/whatsapp';
 import './Footer.css';
-
-const PHONE = '18299678181';
-const PHONE_DISPLAY = '829-967-8181';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -32,7 +30,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href={`https://wa.me/${PHONE}`}
+                href={wa('quiero hacer un pedido')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -43,7 +41,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href={`tel:+1${PHONE}`}
+                href={`tel:+1${WA_PHONE}`}
                 aria-label="Llamar"
                 className="footer__social-link"
               >
@@ -91,7 +89,7 @@ const Footer = () => {
               </li>
               <li>
                 <span className="footer__col-label">Teléfono</span>
-                <a href={`tel:+1${PHONE}`}>{PHONE_DISPLAY}</a>
+                <a href={`tel:+1${WA_PHONE}`}>{WA_PHONE_DISPLAY}</a>
               </li>
               <li>
                 <span className="footer__col-label">Horario</span>

@@ -1,13 +1,10 @@
 import { motion } from 'framer-motion';
 import RevealText from './shared/RevealText';
 import MagneticButton from './shared/MagneticButton';
+import { wa, WA_PHONE, WA_PHONE_DISPLAY } from './shared/whatsapp';
 import './Contacto.css';
 
-const PHONE = '18299678181';
-const PHONE_DISPLAY = '829-967-8181';
-const WA_HREF = `https://wa.me/${PHONE}?text=${encodeURIComponent(
-  'Hola, quiero hacer un pedido en El Tropezón Fast Food',
-)}`;
+const WA_HREF = wa('quiero hacer un pedido');
 
 // Embed genérico apuntando a "El Tropezón Fast Food, Azua, RD".
 // Reemplazar por el embed exacto desde Google Maps cuando esté disponible.
@@ -78,9 +75,9 @@ const Contacto = () => {
                 <span className="contacto__item-label">Teléfono / WhatsApp</span>
                 <a
                   className="contacto__item-value contacto__item-link"
-                  href={`tel:+1${PHONE}`}
+                  href={`tel:+1${WA_PHONE}`}
                 >
-                  {PHONE_DISPLAY}
+                  {WA_PHONE_DISPLAY}
                 </a>
               </div>
             </li>

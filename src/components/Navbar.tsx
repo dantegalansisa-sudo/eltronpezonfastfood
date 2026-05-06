@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MagneticButton from './shared/MagneticButton';
+import { wa } from './shared/whatsapp';
 import './Navbar.css';
 
-const WA_HREF = `https://wa.me/18299678181?text=${encodeURIComponent(
-  'Hola, quiero hacer un pedido en El Tropezón Fast Food',
-)}`;
+const WA_HREF = wa('quiero hacer un pedido');
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);

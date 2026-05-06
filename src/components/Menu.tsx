@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import RevealText from './shared/RevealText';
+import { wa } from './shared/whatsapp';
 import {
   menuData,
   tabsConfig,
@@ -9,16 +10,12 @@ import {
 } from './menu-data';
 import './Menu.css';
 
-const PHONE = '18299678181';
-const wa = (msg: string) =>
-  `https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`;
-
 const fmt = (n: number) => `RD$ ${n.toLocaleString('es-DO')}`;
 
 const ItemRow = ({ item, index }: { item: MenuItem; index: number }) => {
   const hasMultiPrice = !!item.precios;
 
-  const orderMsg = `Hola, quiero ordenar ${item.nombre}`;
+  const orderAction = `quiero ordenar ${item.nombre}`;
 
   return (
     <motion.div
@@ -54,7 +51,7 @@ const ItemRow = ({ item, index }: { item: MenuItem; index: number }) => {
           </span>
         )}
         <a
-          href={wa(orderMsg)}
+          href={wa(orderAction)}
           target="_blank"
           rel="noopener noreferrer"
           className="menu__item-cta"
@@ -153,7 +150,7 @@ const Menu = () => {
 
         <div className="menu__cta-bottom">
           <a
-            href={wa('Hola, quiero el menú completo en PDF')}
+            href={wa('quiero ayuda eligiendo del menú')}
             target="_blank"
             rel="noopener noreferrer"
             className="menu__cta-link"
